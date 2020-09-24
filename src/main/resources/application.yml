@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consumer-message
+server:
+  port: 8768
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
